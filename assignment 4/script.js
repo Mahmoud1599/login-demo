@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     input.classList.replace("d-none", "d-block");
   }
   function isExist(user) {
-    var storageUsers = JSON.parse(localStorage.getItem("admin"));
+    var storageUsers = JSON.parse(localStorage.getItem("admin")) || [];
     for (let i = 0; i < storageUsers.length; i++) {
       if (user.mail == storageUsers[i].mail) {
         return true;
